@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shati\\Desktop\\FinalProject\\Hangman\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C718CE3A-4F4C-40AC-84BF-F3953E1B831A}|Hangman\\Hangman.csproj|c:\\users\\shati\\desktop\\finalproject\\hangman\\hangman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C718CE3A-4F4C-40AC-84BF-F3953E1B831A}|Hangman\\Hangman.csproj|solutionrelative:hangman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shati\\Desktop\\FinalProject\\Hangman\\Hangman\\Program.cs",
+              "RelativeDocumentMoniker": "Hangman\\Program.cs",
+              "ToolTip": "C:\\Users\\shati\\Desktop\\FinalProject\\Hangman\\Hangman\\Program.cs",
+              "RelativeToolTip": "Hangman\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T19:19:31.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
