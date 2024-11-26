@@ -12,3 +12,4 @@ C:\Users\shati\Desktop\FinalProject\Calculator\Calculator\obj\Debug\net8.0\refin
 C:\Users\shati\Desktop\FinalProject\Calculator\Calculator\obj\Debug\net8.0\Calculator.pdb
 C:\Users\shati\Desktop\FinalProject\Calculator\Calculator\obj\Debug\net8.0\Calculator.genruntimeconfig.cache
 C:\Users\shati\Desktop\FinalProject\Calculator\Calculator\obj\Debug\net8.0\ref\Calculator.dll
+C:\Users\shati\Desktop\FinalProject\Calculator\Calculator\obj\Debug\net8.0\Calculator.sourcelink.json
