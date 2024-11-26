@@ -1,0 +1,15 @@
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\bin\Debug\net8.0\BookProject.exe
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\bin\Debug\net8.0\BookProject.deps.json
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\bin\Debug\net8.0\BookProject.runtimeconfig.json
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\bin\Debug\net8.0\BookProject.dll
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\bin\Debug\net8.0\BookProject.pdb
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.AssemblyInfoInputs.cache
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.AssemblyInfo.cs
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.csproj.CoreCompileInputs.cache
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.sourcelink.json
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.dll
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\refint\BookProject.dll
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.pdb
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\BookProject.genruntimeconfig.cache
+C:\Users\shati\Desktop\FinalProject\BookProject\BookProject\obj\Debug\net8.0\ref\BookProject.dll
