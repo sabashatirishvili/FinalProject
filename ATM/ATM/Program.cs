@@ -8,6 +8,12 @@ namespace ATM
         {
             var folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ATM");
             var filepath = Path.Combine(folderPath, "balance.txt");
+
+            if (Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
             if (!File.Exists(filepath) ) {
                 using (FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate, FileAccess.Write)) {
                     using (StreamWriter sw = new StreamWriter(fs)) {
@@ -174,6 +180,7 @@ namespace ATM
 
                     using (StreamWriter sw = new StreamWriter(fs))
                     {
+                        File.WriteAllLines(filepath, string.Empty);
                         sw.WriteLine(currentBalance);
                         Console.WriteLine($"Deposit completed. New Balance: {currentBalance}");
                     }
