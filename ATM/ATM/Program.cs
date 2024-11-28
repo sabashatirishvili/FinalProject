@@ -9,7 +9,7 @@ namespace ATM
             var folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ATM");
             var filepath = Path.Combine(folderPath, "balance.txt");
 
-            if (Directory.Exists(folderPath))
+            if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
@@ -134,60 +134,59 @@ namespace ATM
             }
         }
 
-        static void Transfer (string path, string name, double amount)
+        static void Transfer(string path, string name, double amount)
         {
             var folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ATM");
             var filepath = Path.Combine(folderPath, name + ".txt");
 
             if (!File.Exists(filepath))
             {
-                using (FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate, FileAccess.Write))
+                using (var fs = new FileStream(filepath, FileMode.Create, FileAccess.Write))
+                using (var sw = new StreamWriter(fs))
                 {
-                    using (StreamWriter sw = new StreamWriter(fs))
-                    {
-                        sw.WriteLine("0");
-                    }
+                    sw.WriteLine(0);
                 }
             }
 
-            using (FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            double senderBalance;
+            using (var fs = new FileStream(path, FileMode.Open, FileAccess.ReadWrite))
+            using (var sr = new StreamReader(fs))
             {
-                using (StreamReader sr = new StreamReader(fs))
-                {
-                    var content = sr.ReadToEnd().Replace(" ", "");
-                    double currentBalance = double.Parse(content);
-
-                    currentBalance += amount;
-
-                    fs.SetLength(0);
-
-                    using (FileStream fstream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
-                    {
-                        using (StreamReader reader = new StreamReader(fstream))
-                        {
-                            var tempBalance = reader.ReadToEnd().Replace(" ", "");
-                            double balance = double.Parse(tempBalance);
-
-                            balance -= amount;
-
-
-                            using (StreamWriter writer = new StreamWriter(fstream))
-                            {
-                                writer.WriteLine(balance);
-                            }
-                        }
-                    }
-
-                    using (StreamWriter sw = new StreamWriter(fs))
-                    {
-                        File.WriteAllLines(filepath, string.Empty);
-                        sw.WriteLine(currentBalance);
-                        Console.WriteLine($"Deposit completed. New Balance: {currentBalance}");
-                    }
-                }
+                senderBalance = double.Parse(sr.ReadToEnd().Trim());
             }
 
+            if (senderBalance < amount)
+            {
+                Console.WriteLine("Insufficient funds to transfer.");
+                return;
+            }
+
+            senderBalance -= amount;
+
+            using (var fs = new FileStream(path, FileMode.Open, FileAccess.Write))
+            using (var sw = new StreamWriter(fs))
+            {
+                sw.WriteLine(senderBalance);
+            }
+
+            double recipientBalance;
+            using (var fs = new FileStream(filepath, FileMode.Open, FileAccess.ReadWrite))
+            using (var sr = new StreamReader(fs))
+            {
+                recipientBalance = double.Parse(sr.ReadToEnd().Trim());
+            }
+
+            recipientBalance += amount;
+
+            using (var fs = new FileStream(filepath, FileMode.Open, FileAccess.Write))
+            using (var sw = new StreamWriter(fs))
+            {
+                sw.WriteLine(recipientBalance);
+            }
+
+            Console.WriteLine($"Transfer of ${amount} to {name} completed. New balance: ${senderBalance}");
         }
+
 
     }
 
